@@ -1,8 +1,0 @@
-name = "sunshine-presbyterian-site"
-compatibility_date = "2024-04-13"
-
-[build]
-upload.format = "directory"
-upload.dir = "./"
-
-pages_build_output_dir = "./"
