@@ -49,17 +49,8 @@ function Header() {
       <div className="wrap">
         <div className="title-area">
           <div itemScope itemType="http://schema.org/Organization" className="site-title">
-            <a
-              itemProp="url"
-              href="https://sunshinepresbyterian.com.au"
-              title="Sunshine Presbyterian Church"
-              rel="home"
-            >
-              <img
-                itemProp="logo"
-                alt="Sunshine Presbyterian Church Logo"
-                src={SunshineChurchLogo}
-              />
+            <a itemProp="url" href="https://sunshinepresbyterian.com.au">
+              <img alt="Sunshine Presbyterian Church Logo" src={SunshineChurchLogo} />
             </a>
           </div>
         </div>
