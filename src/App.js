@@ -2,6 +2,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import './App.css'; // Import your styles if needed
 
+// Import the new images
+import MainImage from './img/MainImage.png';
+import SunshineChurchLogo from './img/SunshineChurchLogo.png';
+
 function App() {
   return (
     <>
@@ -10,6 +14,10 @@ function App() {
         <title>Sunshine Presbyterian Church</title>
         <meta name="viewport" content="width=device-width" />
         <link rel="profile" href="http://gmpg.org/xfn/11" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+        />
         <meta name="robots" content="max-image-preview:large" />
         {/* Add additional meta tags, links and scripts as needed */}
       </Helmet>
@@ -49,8 +57,8 @@ function Header() {
             >
               <img
                 itemProp="logo"
-                alt="Sunshine Presbyterian Church"
-                src="https://sunshinepresbyterian.com.au/wp-content/uploads/2024/08/Screenshot-2024-05-13-at-9.33.02%E2%80%AFPM.png"
+                alt="Sunshine Presbyterian Church Logo"
+                src={SunshineChurchLogo}
               />
             </a>
           </div>
@@ -113,8 +121,8 @@ function Banner() {
       <div className="wrap">
         <img
           className="header-image"
-          src="https://sunshinepresbyterian.com.au/wp-content/uploads/2024/09/SPC-Header.png"
-          alt=""
+          src={MainImage}
+          alt="Main banner"
         />
       </div>
     </div>
@@ -173,7 +181,6 @@ function MainContent() {
 
 function Sidebar() {
   return (
-    // Removed redundant role attribute
     <aside id="sidebar" className="sidebar sidebar-primary widget-area" itemScope itemType="http://schema.org/WPSideBar">
       <section id="text-2" className="widget widget-1 even widget-first widget_text">
         <div className="widget-wrap">
