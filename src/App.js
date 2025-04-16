@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import './App.css'; // import your styles if needed
+import './App.css'; // Import your styles if needed
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         <meta name="viewport" content="width=device-width" />
         <link rel="profile" href="http://gmpg.org/xfn/11" />
         <meta name="robots" content="max-image-preview:large" />
-        {/* Other meta tags, links and even script tags if needed can be added here */}
+        {/* Add additional meta tags, links and scripts as needed */}
       </Helmet>
       <div className="site-container">
         <Header />
@@ -31,20 +31,26 @@ function App() {
 
 function Header() {
   return (
-    <header id="header" className="site-header" role="banner" itemScope itemType="http://schema.org/WPHeader">
+    <header
+      id="header"
+      className="site-header"
+      role="banner"
+      itemScope
+      itemType="http://schema.org/WPHeader"
+    >
       <div className="wrap">
         <div className="title-area">
           <div itemScope itemType="http://schema.org/Organization" className="site-title">
-            <a 
-              itemProp="url" 
-              href="https://sunshinepresbyterian.com.au" 
-              title="Sunshine Presbyterian Church" 
+            <a
+              itemProp="url"
+              href="https://sunshinepresbyterian.com.au"
+              title="Sunshine Presbyterian Church"
               rel="home"
             >
-              <img 
-                itemProp="logo" 
-                alt="Sunshine Presbyterian Church" 
-                src="https://sunshinepresbyterian.com.au/wp-content/uploads/2024/08/Screenshot-2024-05-13-at-9.33.02%E2%80%AFPM.png" 
+              <img
+                itemProp="logo"
+                alt="Sunshine Presbyterian Church"
+                src="https://sunshinepresbyterian.com.au/wp-content/uploads/2024/08/Screenshot-2024-05-13-at-9.33.02%E2%80%AFPM.png"
               />
             </a>
           </div>
@@ -56,22 +62,43 @@ function Header() {
 
 function Navigation() {
   return (
-    <nav id="navigation" className="nav-primary" role="navigation" itemScope itemType="http://schema.org/SiteNavigationElement">
+    <nav
+      id="navigation"
+      className="nav-primary"
+      role="navigation"
+      itemScope
+      itemType="http://schema.org/SiteNavigationElement"
+    >
       <div className="wrap">
-        <a href="#" id="menu-icon" className="menu-icon">
+        {/* Replace the anchor with a button for accessibility */}
+        <button id="menu-icon" className="menu-icon" type="button">
           <span></span>
-        </a>
+        </button>
         <ul id="menu-default" className="menu omega-nav-menu menu-primary">
-          <li id="menu-item-73" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-7 current_page_item first menu-item-73">
-            <a href="https://sunshinepresbyterian.com.au/" aria-current="page">Home</a>
+          <li
+            id="menu-item-73"
+            className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-7 current_page_item first menu-item-73"
+          >
+            <a href="https://sunshinepresbyterian.com.au/" aria-current="page">
+              Home
+            </a>
           </li>
-          <li id="menu-item-116" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-116">
+          <li
+            id="menu-item-116"
+            className="menu-item menu-item-type-post_type menu-item-object-page menu-item-116"
+          >
             <a href="https://sunshinepresbyterian.com.au/?page_id=110">WORSHIP</a>
           </li>
-          <li id="menu-item-67" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-67">
+          <li
+            id="menu-item-67"
+            className="menu-item menu-item-type-post_type menu-item-object-page menu-item-67"
+          >
             <a href="https://sunshinepresbyterian.com.au/?page_id=65">ABOUT</a>
           </li>
-          <li id="menu-item-25" className="menu-item menu-item-type-post_type menu-item-object-page last menu-item-25">
+          <li
+            id="menu-item-25"
+            className="menu-item menu-item-type-post_type menu-item-object-page last menu-item-25"
+          >
             <a href="https://sunshinepresbyterian.com.au/?page_id=6">CONTACT</a>
           </li>
         </ul>
@@ -84,10 +111,10 @@ function Banner() {
   return (
     <div className="banner">
       <div className="wrap">
-        <img 
-          className="header-image" 
-          src="https://sunshinepresbyterian.com.au/wp-content/uploads/2024/09/SPC-Header.png" 
-          alt="" 
+        <img
+          className="header-image"
+          src="https://sunshinepresbyterian.com.au/wp-content/uploads/2024/09/SPC-Header.png"
+          alt=""
         />
       </div>
     </div>
@@ -97,10 +124,10 @@ function Banner() {
 function MainContent() {
   return (
     <main className="content" id="content" role="main" itemProp="mainContentOfPage">
-      <article 
-        id="post-7" 
-        className="entry page publish author-samuelson post-7" 
-        itemScope 
+      <article
+        id="post-7"
+        className="entry page publish author-samuelson post-7"
+        itemScope
         itemType="http://schema.org/CreativeWork"
       >
         <div className="entry-wrap">
@@ -126,9 +153,7 @@ function MainContent() {
             <p>
               <strong>We stand</strong> in the heritage of the Reformation; walking in God’s truth and living in the Holy Spirit’s power.
             </p>
-            <p>
-              We are located at 120 Anderson Road, Sunshine. Our main Sunday service is at 10am.
-            </p>
+            <p>We are located at 120 Anderson Road, Sunshine. Our main Sunday service is at 10am.</p>
             <h2 style={{ textAlign: 'center' }}>
               <strong>The Lord’s Day Worship Service at 10 am</strong>
             </h2>
@@ -148,13 +173,8 @@ function MainContent() {
 
 function Sidebar() {
   return (
-    <aside 
-      id="sidebar" 
-      className="sidebar sidebar-primary widget-area" 
-      role="complementary" 
-      itemScope 
-      itemType="http://schema.org/WPSideBar"
-    >
+    // Removed redundant role attribute
+    <aside id="sidebar" className="sidebar sidebar-primary widget-area" itemScope itemType="http://schema.org/WPSideBar">
       <section id="text-2" className="widget widget-1 even widget-first widget_text">
         <div className="widget-wrap">
           <h4 className="widget-title">Worship Time and Location</h4>
@@ -189,22 +209,20 @@ function Sidebar() {
 
 function Footer() {
   return (
-    <footer 
-      id="footer" 
-      className="site-footer" 
-      role="contentinfo" 
-      itemScope 
+    <footer
+      id="footer"
+      className="site-footer"
+      role="contentinfo"
+      itemScope
       itemType="http://schema.org/WPFooter"
     >
       <div className="wrap">
         <div className="footer-content footer-insert">
-          <p className="copyright">
-            Copyright © 2025 Sunshine Presbyterian Church.
-          </p>
+          <p className="copyright">Copyright © 2025 Sunshine Presbyterian Church.</p>
           <p className="credit">
-            <a 
-              className="child-link" 
-              href="https://themehall.com/free-responsive-church-theme-wordpress" 
+            <a
+              className="child-link"
+              href="https://themehall.com/free-responsive-church-theme-wordpress"
               title="Church WordPress Theme"
             >
               Church
