@@ -1,116 +1,104 @@
-/* ------------------------------------------------------ 
-   Base Styles
---------------------------------------------------------- */
+/*
+  Sunshine Presbyterian Church - Clean Website CSS
+  This CSS provides a clean, modern look for the website.
+*/
+
+/* Base Reset */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html,
-body {
-  font-family: 'Open Sans', sans-serif; /* Requires Google Font import */
+html {
   font-size: 16px;
-  line-height: 1.5;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
   background-color: #ffffff;
   color: #333333;
+  line-height: 1.6;
 }
 
-a {
-  color: #0055aa;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* ------------------------------------------------------ 
-   Layout Containers
---------------------------------------------------------- */
+/* Utility Containers */
 .site-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-.site-inner {
-  flex: 1; /* Push footer to the bottom */
-  padding: 2rem 0;
-}
-
-/* .wrap centers content with a max-width */
 .wrap {
-  max-width: 1100px;
+  max-width: 1200px;
+  width: 90%;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 1rem;
 }
 
-/* ------------------------------------------------------ 
-   Header
---------------------------------------------------------- */
+/* Header */
 .site-header {
   background-color: #f8f8f8;
-  padding: 1rem 0;
-  border-bottom: 1px solid #ddd;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.site-title {
+  text-align: center;
 }
 
 .site-title img {
-  max-width: 200px;
+  max-width: 180px;
   height: auto;
-  display: block;
-  margin: 0 auto;
+  display: inline-block;
 }
 
-/* ------------------------------------------------------ 
-   Navigation
---------------------------------------------------------- */
+/* Navigation */
 .nav-primary {
-  background-color: #333;
-  padding: 0.5rem 0;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0.75rem 0;
 }
 
-.nav-primary .wrap {
+.nav-container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
-/* Hides the button by default on large screens. Show it only if you plan to implement a mobile menu. */
 .menu-icon {
-  display: none;
-  background: transparent;
+  background: none;
   border: none;
   cursor: pointer;
-  color: #ffffff;
-  font-size: 1.2rem;
 }
 
-.nav-primary .menu {
+.menu-icon span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 4px 0;
+  background-color: #333333;
+}
+
+.nav-menu {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
+  align-items: center;
 }
 
-.nav-primary .menu > li {
-  position: relative;
-}
-
-.nav-primary .menu > li > a {
-  color: #ffffff;
-  padding: 0.5rem 0.8rem;
-  display: block;
+.nav-item a {
+  text-decoration: none;
+  color: #333333;
   font-weight: 600;
-  transition: background-color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
-.nav-primary .menu > li > a:hover {
-  background-color: #444;
+.nav-item a:hover,
+.nav-item.active a {
+  color: #0055aa;
 }
 
-/* ------------------------------------------------------ 
-   Banner / Main Image
---------------------------------------------------------- */
+/* Banner */
 .banner {
   width: 100%;
   overflow: hidden;
@@ -121,49 +109,59 @@ a:hover {
 .header-image {
   display: block;
   width: 100%;
-  height: auto; /* Keeps image responsive */
+  height: auto;
 }
 
-/* ------------------------------------------------------ 
-   Main Content
---------------------------------------------------------- */
+/* Main Content Area */
+.site-inner {
+  flex: 1;
+  padding: 2rem 0;
+}
+
 .content {
   margin-bottom: 2rem;
 }
 
-.entry-title {
-  font-size: 2rem;
-  margin: 1rem 0;
+.article {
+  margin-bottom: 2rem;
+}
+
+.article-header {
   text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.article-title {
+  font-size: 2.2rem;
   font-weight: 600;
 }
 
-.entry-content p {
+.article-content p {
   margin-bottom: 1rem;
   line-height: 1.8;
 }
 
-.entry-content a {
+.article-content a {
   color: #0066cc;
+  text-decoration: underline;
 }
 
-/* ------------------------------------------------------ 
-   Sidebar
---------------------------------------------------------- */
+/* Sidebar */
 .sidebar {
   background-color: #fafafa;
-  padding: 1rem;
+  padding: 1.5rem;
+  border: 1px solid #e5e5e5;
   margin-top: 2rem;
-  border: 1px solid #ddd;
 }
 
 .sidebar .widget-title {
+  font-size: 1.2rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .sidebar ul {
-  list-style-type: disc;
+  list-style: disc;
   margin-left: 1.5rem;
 }
 
@@ -171,32 +169,44 @@ a:hover {
   margin-bottom: 0.5rem;
 }
 
-/* ------------------------------------------------------ 
-   Footer
---------------------------------------------------------- */
+/* Footer */
 .site-footer {
-  background-color: #333;
-  color: #ffffff;
-  padding: 1rem 0;
+  background-color: #333333;
+  color: #cccccc;
+  padding: 1.5rem 0;
   text-align: center;
 }
 
 .footer-content {
-  max-width: 1100px;
+  max-width: 1200px;
+  width: 90%;
   margin: 0 auto;
-  padding: 0 1rem;
 }
 
-.footer-content a {
+.site-footer a {
   color: #cccccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.footer-content a:hover {
+.site-footer a:hover {
   color: #ffffff;
-  text-decoration: underline;
 }
 
 .credit {
   margin-top: 0.5rem;
   font-size: 0.875rem;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+  .wrap {
+    padding: 0 2rem;
+  }
+  .article-title {
+    font-size: 2.5rem;
+  }
+  .nav-menu {
+    gap: 2.5rem;
+  }
 }
