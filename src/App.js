@@ -49,9 +49,13 @@ function Header() {
       <div className="wrap">
         <div className="title-area">
           <div itemScope itemType="http://schema.org/Organization" className="site-title">
-            <a itemProp="url" href="https://sunshinepresbyterian.com.au">
+            <button
+              itemProp="url"
+              onClick={() => window.location.href = "https://sunshinepresbyterian.com.au"}
+              style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
+            >
               <img alt="Sunshine Presbyterian Church Logo" src={SunshineChurchLogo} />
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -122,7 +126,7 @@ function Banner() {
 
 function MainContent() {
   return (
-    <main className="content" id="content" role="main" itemProp="mainContentOfPage">
+    <main className="content" id="content" itemProp="mainContentOfPage">
       <article
         id="post-7"
         className="entry page publish author-samuelson post-7"
