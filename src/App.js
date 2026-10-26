@@ -3,7 +3,8 @@ import { Helmet } from 'react-helmet';
 import './App.css'; // Import your styles if needed
 
 // Import the new images
-import MainImage from './img/MainImage.png';
+import MainImageJpg from './img/MainImage.jpg';
+import MainImageWebp from './img/MainImage.webp';
 import SunshineChurchLogo from './img/SunshineChurchLogo.png';
 
 function App() {
@@ -45,7 +46,12 @@ function Header() {
               onClick={() => window.location.href = "https://sunshinepresbyterian.com.au"}
               style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
             >
-              <img alt="Sunshine Presbyterian Church Logo" src={SunshineChurchLogo} />
+              <img
+                alt="Sunshine Presbyterian Church Logo"
+                src={SunshineChurchLogo}
+                width="360"
+                height="155"
+              />
             </button>
           </div>
         </div>
@@ -84,7 +90,17 @@ function Banner() {
   return (
     <div className="banner">
       <div className="wrap">
-        <img className="header-image" src={MainImage} alt="Main banner" />
+        <picture>
+          <source srcSet={MainImageWebp} type="image/webp" />
+          <img
+            className="header-image"
+            src={MainImageJpg}
+            alt="Main banner"
+            width="2048"
+            height="1365"
+            fetchPriority="high"
+          />
+        </picture>
       </div>
     </div>
   );
